@@ -1,0 +1,16 @@
+---
+# defaults file for ansible-role-nfs-server-provisioner
+
+nfs_server_provisioner_helm_chart:
+  name: nfs-server-provisioner
+  version: 0.3.0
+  release: nfs-server-provisioner-prod
+  namespace: kube-system
+  source:
+    type: repo
+    location: https://kubernetes-charts.storage.googleapis.com
+  state: present
+  values: {}
+  # persistence:
+  #   enabled: true
+  #   size: 1Gi

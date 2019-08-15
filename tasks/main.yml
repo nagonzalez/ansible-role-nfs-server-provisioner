@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-role-nfs-server-provisioner
+
+# configue tiller connectivity if required
+- include: tiller.yml
+  when: l_helm_host is not defined or l_helm_port is not defined
+
+# install nfs-server-provisioner helm chart
+- include: nfs-server-provisioner.yml
